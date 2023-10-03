@@ -53,5 +53,5 @@ We were able to identify the genus of bears (Ursus) with the following damage pa
 <img width="253" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/61189065/987245d9-4712-438f-93c7-455cd7dc3cce">
 
 ## Plotting the overall distribution
-
+We used the provided bash loops and R plots (shown in the files plotting.sh and plotting2.sh) to make the two files "readlength_distributionTotal.pdf" and "readlength_distributionPerKingdom.pdf". The "readlength_distributionTotal.pdf" plot shows the read length distribution for every sample. While the "readlength_distributionPerKingdom.pdf" file shows the read length distribution for every read assigned to one of the kingdoms. 
 
