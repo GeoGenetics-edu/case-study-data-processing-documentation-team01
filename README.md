@@ -20,6 +20,38 @@ The last step is mapping with bowtie2.
 
 ## Parameter selection
 
-We removed the duplicates to reduce the amount of data that is being processed and remove pcr bias.
+We removed the duplicates to reduce the amount of data that is being processed and remove PCR bias.
 
-We also removed fragments that are shorter than 30bp long to reduce the liklihood of the presence of false positives, pcr artefacts and fragments that aretoo short to be meaningfil.
+We also removed fragments that are shorter than 30bp long to reduce the likelihood of the presence of false positives, PCR artefacts and fragments that are too short to be meaningful.
+
+
+# Day 2
+## Sorting bam files
+To use our created bam files as input for ngsLCA and metaDMG, we need to sort them first using the following looped command:
+```
+for i in $(cat names)
+do
+  samtools sort -n ${i}.bam -@ 5 > ${i}.sort.bam
+done
+```
+
+## Running ngsLCA and metaDMG
+Following the sorting, we run metaDMG to compute the LCA and get our damage profiles. We first construct the config file using all sorted bam files as input.
+```
+metaDMG config *.sort.bam --names ~/course/data/shared/mapping/taxonomy/names.dmp --nodes ~/course/data/shared/mapping/taxonomy/nodes.dmp --acc2tax ~/course/data/shared/mapping/taxonomy/acc2taxid.map.gz -m /usr/local/bin/metaDMG-cpp
+```
+Once our config.yaml file has been created, we change the custom_db value to true and run the next command:
+```
+metaDMG compute config.yaml 
+```
+This will compute the LCA file and the output needed to visualise the damage pattern, profiles and statistics.
+We set the following filters on the dashboard to minimise contamination from modern sources. We set the minimum damage rate to 0.1 and the minimum MAP significance to 2.
+This results in the following profile:
+<img width="348" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/61189065/d7b73c22-3458-4f22-8e02-f3ce31ba30f0">
+
+We were able to identify the genus of bears (Ursus) with the following damage pattern:
+<img width="253" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/61189065/987245d9-4712-438f-93c7-455cd7dc3cce">
+
+## Plotting the overall distribution
+
+
