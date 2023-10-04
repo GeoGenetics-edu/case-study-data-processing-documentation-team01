@@ -25,7 +25,7 @@ We looped through all of the linked FastQ files for their names and removed the 
 
 Give yourself permission to exectute rmdupMap.sh
 ```
-chmod u+x rmdupMap.sh.sh
+chmod u+x rmdupMap.sh
 ```
 
 We combined the duplicate removal and the mapping into one loop in a bash script.
