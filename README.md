@@ -61,7 +61,7 @@ We used the provided bash loops and R plots (shown in the files plotting.sh and 
 ### Parameter Selection
 We changed minimum damage threshold to 0.1 because we want to get rid of sequences that have 0 damage.  We didn't set it higher because we don't want to be removing true positives. Maybe DNA degrades at different rates and we don't want to lose any potential data.
 
-We set the significance to 2, because when we looked at the damage plot panel this was a good place to minimise the amount of contamination or results affected by misalignment
+We set the MAP significance to 2, because when we looked at the damage plot panel this was a good cut-off to minimise the amount of contamination or results affected by misalignment
 
 We used a minimum of 100 reads per taxon, this is a good amount of reads to be able to identify if it is true damage or not
 
