@@ -65,4 +65,4 @@ We set the significance to 2, because when we looked at the damage plot panel th
 
 We used a minimum of 100 reads per taxon, this is a good amount of reads to be able to identify if it is true damage or not
 
-We used a average length of 35 base pairs because anything lower than this may be to short to identify properly (see above for day 1)
+We used a min length of 30 base pairs because anything lower than this may be to short to identify properly (see above for day 1)
