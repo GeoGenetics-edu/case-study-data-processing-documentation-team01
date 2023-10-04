@@ -64,6 +64,12 @@ The plot of significance of the damage for all taxa with a read count of greater
 The plot of the damage threshold against the number of reads:
 <img width="348" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/blob/main/aeCourse.DNAdamageModelJitterPlot%20(2).pdf">
 
+The plot of the plant strat plot:
+<img width="348" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/blob/main/aeCourse.Stratplot_Plants_area.pdf">
+
+The plot of the percentage of the taxa plotted:
+<img width="348" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/blob/main/aeCourseLastPlot.pdf">
+
 ### Parameter Selection
 We changed minimum damage threshold to 0.1 because we want to get rid of sequences that have 0 damage.  We didn't set it higher because we don't want to be removing true positives. Maybe DNA degrades at different rates and we don't want to lose any potential data.
 
