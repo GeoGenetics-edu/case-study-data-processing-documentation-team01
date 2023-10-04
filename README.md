@@ -4,6 +4,17 @@
 
 # Day 1
 ## Creating a naming index
+
+Make a symbolic link to the data files
+```
+ln -s ~/course/data/day2/fastq/*.fq.gz .
+```
+
+Give yourself permission to exectute getNames.sh
+```
+chmod u+x getNames.sh
+```
+
 ```
 ./getNames.sh > names.txt
 sed 's/.fq.gz//g' > names
@@ -11,6 +22,12 @@ sed 's/.fq.gz//g' > names
 We looped through all of the linked FastQ files for their names and removed the ".fq.gz" ending to use the prefix as a stand-in name for the next loop.
 
 ## Duplicate removal and mapping
+
+Give yourself permission to exectute rmdupMap.sh
+```
+chmod u+x rmdupMap.sh.sh
+```
+
 We combined the duplicate removal and the mapping into one loop in a bash script.
 ```
 ./rmdupMap.sh
