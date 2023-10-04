@@ -18,7 +18,7 @@ We combined the duplicate removal and the mapping into one loop in a bash script
 The summary output of vsearch is piped into logfiles. After the duplicate removal, we count the fragment length of our FastQ file and pipe the output into files ending in "read_length.txt". 
 The last step is mapping with bowtie2.
 
-## Parameter selection
+### Parameter selection
 
 We removed the duplicates to reduce the amount of data that is being processed and remove PCR bias.
 
@@ -55,3 +55,14 @@ We were able to identify the genus of bears (Ursus) with the following damage pa
 ## Plotting the overall distribution
 We used the provided bash loops and R plots (shown in the files plotting.sh and plotting2.sh) to make the two files "readlength_distributionTotal.pdf" and "readlength_distributionPerKingdom.pdf". The "readlength_distributionTotal.pdf" plot shows the read length distribution for every sample. While the "readlength_distributionPerKingdom.pdf" file shows the read length distribution for every read assigned to one of the kingdoms. 
 
+# Day 3
+## Plotting ancient DNA Authentication in Time series data in R
+
+### Parameter Selection
+We changed minimum damage threshold to 0.1 because we want to get rid of sequences that have 0 damage.  We didn't set it higher because we don't want to be removing true positives. Maybe DNA degrades at different rates and we don't want to lose any potential data.
+
+We set the significance to 2, because when we looked at the damage plot panel this was a good place to minimise the amount of contamination or results affected by misalignment
+
+We used a minimum of 100 reads per taxon, this is a good amount of reads to be able to identify if it is true damage or not
+
+We used a minimum length of 35 base pairs because anything lower than this may be to short to identify properly (see above)
