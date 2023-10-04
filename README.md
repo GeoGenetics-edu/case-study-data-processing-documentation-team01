@@ -59,16 +59,18 @@ We used the provided bash loops and R plots (shown in the files plotting.sh and 
 ## Plotting ancient DNA Authentication in Time series data in R
 
 The plot of significance of the damage for all taxa with a read count of greater than 100:
-<img width="348" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/blob/main/aeCourse.DNAdamageLRJitterPlot%20(2).pdf">
+<img width="806" alt="Significance_of_taxa_ 100_reads" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/64648262/3d233deb-299f-4278-95b0-2710de86a780">
 
 The plot of the damage threshold against the number of reads:
-<img width="348" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/blob/main/aeCourse.DNAdamageModelJitterPlot%20(2).pdf">
+<img width="1025" alt="Damage_by_no _of_reads" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/64648262/e21c9c8a-7ee9-4c76-9b6b-4a2a1bc154e2">
+
 
 The plot of the plant strat plot:
-<img width="348" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/blob/main/aeCourse.Stratplot_Plants_area.pdf">
+<img width="1025" alt="Strat_plot" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/64648262/075cd477-a177-4723-9958-d657170fd8d3">
 
 The plot of the percentage of the taxa plotted:
-<img width="348" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/blob/main/aeCourseLastPlot.pdf">
+<img width="1024" alt="Per_cent-of_taxa_idenitifes" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/64648262/dfcec483-bfc0-4463-b82d-0668b3a75c35">
+
 
 ### Parameter Selection
 We changed minimum damage threshold to 0.1 because we want to get rid of sequences that have 0 damage.  We didn't set it higher because we don't want to be removing true positives. Maybe DNA degrades at different rates and we don't want to lose any potential data.
