@@ -90,10 +90,42 @@ The plot of the percentage of the taxa plotted:
 
 
 ### Parameter Selection
-We changed minimum damage threshold to 0.1 because we want to get rid of sequences that have 0 damage.  We didn't set it higher because we don't want to be removing true positives. Maybe DNA degrades at different rates and we don't want to lose any potential data.
+We changed the minimum damage threshold to 0.1 because we want to eliminate sequences with 0 damage.  We didn't set it higher because we didn't want to remove true positives. Maybe DNA degrades at different rates, and we don't want to lose any potential data.
 
-We set the MAP significance to 2, because when we looked at the damage plot panel this was a good cut-off to minimise the amount of contamination or results affected by misalignment
+We set the MAP significance to 2 because when we looked at the damage plot panel, this was a good cut-off to minimise the contamination or results affected by misalignment.
 
-We used a minimum of 100 reads per taxon, this is a good amount of reads to be able to identify if it is true damage or not
+We used a minimum of 100 reads per taxon, this is a good amount of reads to be able to identify if it is true damage or not.
 
-We used a min length of 30 base pairs because anything lower than this may be to short to identify properly (see above for day 1)
+We used a minimum length of 30 base pairs because anything lower than this may be to short to identify properly (see above for day 1)
+
+### Metadata
+Looking at the metadata, we identified the cave's location and the samples to be close to Lima, Peru. To biologically validate our plant taxa we checked their common location and use. 
+<img width="408" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/61189065/12662268-9c1f-4b15-a69c-1e50b412bed1">
+Approximately 75% of the genera is not normally found in Peru. Looking back at the abundance plot, we can see that lots of the plants can be found in the two newest samples, where no evidence of human occupation should be found. 
+All of this information led us to redo our initial analysis with stricter filter parameters, as we believed that the found taxa were false positives. 
+
+### Rerun 
+Our new parameters were set to have a minimum significance of 3, a minimum damage level of 0.15 and a minimum of 100 reads per taxon. We kept the analysis on the genus level. 
+Our rerun led to only identifying four plant genera. 
+<img width="512" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/61189065/bfed1729-0cd8-4dd8-a69f-992306632e79">
+
+Only one of the taxa is native to Peru (Alnus). This is a very common taxon and cannot be taken as any indication of human presence. 
+
+### Mammalian non-human
+As there is no DNA evidence of human presence in any of the samples and the plant communities do not indicate any human presence either we checked other mammalian families that could be present. 
+From metaDMG, we know that the youngest samples (PRI-TJPGK-CATN-96-98) show the genus of bears (Ursus) passing all of our filters. 
+We rerun our data with euka to access a different database. We got an additional hit to the bears, the Bovidae family. 
+
+<img width="469" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/61189065/7e529d92-c907-48f3-aa75-253ad90b8c69">
+
+<img width="471" alt="image" src="https://github.com/GeoGenetics-edu/case-study-data-processing-documentation-team01/assets/61189065/39841b95-e222-49e3-a472-7431508f2063">
+
+The damage pattern and fragment length distribution of the family Bovidae are not quite as good as the one from the bears. This taxon may be a contamination from a modern source or an even more recent sample. 
+
+## Conclusion
+To conclude, the only eukaryotic taxon that can be verified is the genus of bears. This is most likely a bear cave, but the samples from the cave show no indication of human presence. 
+
+## Further outlook
+One could look more specifically into the microbial communities.
+
+
